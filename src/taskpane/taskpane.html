@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Explain My Email</title>
+
+    <!-- Office JavaScript API -->
+    <script type="text/javascript" src="https://appsforoffice.microsoft.com/lib/1/hosted/office.js"></script>
+
+    <!-- Styling -->
+    <link rel="stylesheet" href="https://res-1.cdn.office.net/files/fabric-cdn-prod_20230815.002/office-ui-fabric-core/11.1.0/css/fabric.min.css" />
+    <link href="taskpane.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body class="ms-font-m ms-Fabric">
+    <div style="padding: 20px;">
+        <h1 class="ms-font-xl">Explain My Email</h1>
+        <button id="run" class="ms-Button ms-Button--primary">
+            <span class="ms-Button-label">Explain This Email</span>
+        </button>
+        <pre id="status" style="margin-top: 20px; white-space: pre-wrap;"></pre>
+    </div>
+
+    <script src="./taskpane.js"></script>
+</body>
+
+</html>
