@@ -9,26 +9,23 @@
   <Version>1.0.0.0</Version>
   <ProviderName>ExplainMyEmail</ProviderName>
   <DefaultLocale>en-US</DefaultLocale>
-  <DisplayName DefaultValue="Explain My Email"/>
-  <Description DefaultValue="Analyze email headers for red flags and plain-English explanations."/>
-  <IconUrl DefaultValue="https://dperez40.github.io/explain-my-email/assets/icon-32.png"/>
-  <HighResolutionIconUrl DefaultValue="https://dperez40.github.io/explain-my-email/assets/icon-64.png"/>
-  <SupportUrl DefaultValue="https://dperez40.github.io/explain-my-email/"/>
+  <DisplayName DefaultValue="ExplainMyEmail" />
+  <Description DefaultValue="Helps users analyze email red flags." />
 
   <Hosts>
-    <Host Name="Mailbox"/>
+    <Host Name="Mailbox" />
   </Hosts>
 
   <Requirements>
     <Sets DefaultMinVersion="1.1">
-      <Set Name="Mailbox"/>
+      <Set Name="Mailbox" />
     </Sets>
   </Requirements>
 
   <FormSettings>
     <Form xsi:type="ItemRead">
       <DesktopSettings>
-        <SourceLocation DefaultValue="https://dperez40.github.io/explain-my-email/taskpane.html"/>
+        <SourceLocation DefaultValue="https://localhost:3000/taskpane.html"/>
         <RequestedHeight>250</RequestedHeight>
       </DesktopSettings>
     </Form>
@@ -37,67 +34,52 @@
   <Permissions>ReadItem</Permissions>
 
   <Rule xsi:type="RuleCollection" Mode="Or">
-    <Rule xsi:type="ItemIs" ItemType="Message" FormType="Read"/>
+    <Rule xsi:type="ItemIs" ItemType="Message" FormType="Read" />
   </Rule>
 
-  <DisableEntityHighlighting>false</DisableEntityHighlighting>
-
-  <VersionOverrides V="1.0" xmlns="http://schemas.microsoft.com/office/mailappversionoverrides/1.0">
+  <VersionOverrides xmlns="http://schemas.microsoft.com/office/mailappversionoverrides/1.0">
     <Requirements>
       <bt:Sets DefaultMinVersion="1.5">
-        <bt:Set Name="Mailbox"/>
+        <bt:Set Name="Mailbox" />
       </bt:Sets>
     </Requirements>
 
-    <Hosts>
-      <Host Name="Mailbox">
-        <DesktopFormFactor>
-          <FunctionFile resid="functionFile"/>
-          <ExtensionPoint xsi:type="MessageReadCommandSurface">
-            <OfficeTab id="TabDefault">
-              <Group id="msgReadGroup">
-                <Label resid="groupLabel"/>
-                <Control xsi:type="Button" id="msgReadOpenPaneButton">
-                  <Label resid="paneReadButtonLabel"/>
-                  <Supertip>
-                    <Title resid="paneReadSuperTipTitle"/>
-                    <Description resid="paneReadSuperTipDescription"/>
-                  </Supertip>
-                  <Icon>
-                    <bt:Image size="16" resid="icon16"/>
-                    <bt:Image size="32" resid="icon32"/>
-                    <bt:Image size="80" resid="icon80"/>
-                  </Icon>
-                  <Action xsi:type="ShowTaskpane">
-                    <SourceLocation resid="taskpaneUrl"/>
-                  </Action>
-                </Control>
-              </Group>
-            </OfficeTab>
-          </ExtensionPoint>
-        </DesktopFormFactor>
-      </Host>
-    </Hosts>
-
+    <Description resid="residAppDescription" />
     <Resources>
-      <bt:Images>
-        <bt:Image id="icon16" DefaultValue="https://dperez40.github.io/explain-my-email/assets/icon-16.png"/>
-        <bt:Image id="icon32" DefaultValue="https://dperez40.github.io/explain-my-email/assets/icon-32.png"/>
-        <bt:Image id="icon80" DefaultValue="https://dperez40.github.io/explain-my-email/assets/icon-80.png"/>
-      </bt:Images>
+      <bt:Images />
       <bt:Urls>
-        <bt:Url id="taskpaneUrl" DefaultValue="https://dperez40.github.io/explain-my-email/taskpane.html"/>
-        <bt:Url id="functionFile" DefaultValue="https://dperez40.github.io/explain-my-email/commands.html"/>
+        <bt:Url id="taskpaneUrl" DefaultValue="https://localhost:3000/taskpane.html" />
+        <bt:Url id="commandsUrl" DefaultValue="https://localhost:3000/commands.html" />
       </bt:Urls>
       <bt:ShortStrings>
-        <bt:String id="groupLabel" DefaultValue="ExplainMyEmail"/>
-        <bt:String id="paneReadButtonLabel" DefaultValue="Analyze Email"/>
-        <bt:String id="paneReadSuperTipTitle" DefaultValue="Analyze Email Headers"/>
+        <bt:String id="residAppName" DefaultValue="ExplainMyEmail" />
       </bt:ShortStrings>
       <bt:LongStrings>
-        <bt:String id="paneReadSuperTipDescription" DefaultValue="Click to analyze this email for suspicious red flags using plain-English AI."/>
+        <bt:String id="residAppDescription" DefaultValue="Helps users analyze email red flags." />
       </bt:LongStrings>
     </Resources>
-  </VersionOverrides>
 
+    <ExtensionPoint xsi:type="MessageReadCommandSurface">
+      <OfficeTab id="TabDefault">
+        <Group id="msgReadGroup">
+          <Label resid="residAppName"/>
+          <Control xsi:type="Button" id="msgReadOpenPaneButton">
+            <Label resid="residAppName"/>
+            <Supertip>
+              <Title resid="residAppName"/>
+              <Description resid="residAppDescription"/>
+            </Supertip>
+            <Icon>
+              <bt:Image size="16" resid="icon16" />
+              <bt:Image size="32" resid="icon32" />
+              <bt:Image size="80" resid="icon80" />
+            </Icon>
+            <Action xsi:type="ShowTaskpane">
+              <SourceLocation resid="taskpaneUrl" />
+            </Action>
+          </Control>
+        </Group>
+      </OfficeTab>
+    </ExtensionPoint>
+  </VersionOverrides>
 </OfficeApp>
