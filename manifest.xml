@@ -45,19 +45,24 @@
     </Requirements>
 
     <Description resid="residAppDescription" />
-    <Resources>
-      <bt:Images />
-      <bt:Urls>
-        <bt:Url id="taskpaneUrl" DefaultValue="https://localhost:3000/taskpane.html" />
-        <bt:Url id="commandsUrl" DefaultValue="https://localhost:3000/commands.html" />
-      </bt:Urls>
-      <bt:ShortStrings>
-        <bt:String id="residAppName" DefaultValue="ExplainMyEmail" />
-      </bt:ShortStrings>
-      <bt:LongStrings>
-        <bt:String id="residAppDescription" DefaultValue="Helps users analyze email red flags." />
-      </bt:LongStrings>
-    </Resources>
+<Resources>
+  <bt:Images>
+    <bt:Image id="icon16" DefaultValue="https://localhost:3000/assets/icon-16.png" />
+    <bt:Image id="icon32" DefaultValue="https://localhost:3000/assets/icon-32.png" />
+    <bt:Image id="icon80" DefaultValue="https://localhost:3000/assets/icon-80.png" />
+  </bt:Images>
+  <bt:Urls>
+    <bt:Url id="taskpaneUrl" DefaultValue="https://localhost:3000/taskpane.html" />
+    <bt:Url id="commandsUrl" DefaultValue="https://localhost:3000/commands.html" />
+  </bt:Urls>
+  <bt:ShortStrings>
+    <bt:String id="residAppName" DefaultValue="ExplainMyEmail" />
+  </bt:ShortStrings>
+  <bt:LongStrings>
+    <bt:String id="residAppDescription" DefaultValue="Helps users analyze email red flags." />
+  </bt:LongStrings>
+</Resources>
+
 
     <ExtensionPoint xsi:type="MessageReadCommandSurface">
       <OfficeTab id="TabDefault">
