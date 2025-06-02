@@ -27,7 +27,8 @@
   <FormSettings>
     <Form xsi:type="ItemRead">
       <DesktopSettings>
-        <SourceLocation DefaultValue="https://localhost:3000/taskpane.html"/>
+        <SourceLocation DefaultValue="https://dperez40.github.io/explain-my-email/taskpane.html" />
+
         <RequestedHeight>250</RequestedHeight>
       </DesktopSettings>
     </Form>
@@ -49,13 +50,13 @@
     <Description resid="residAppDescription" />
 <Resources>
   <bt:Images>
-    <bt:Image id="icon16" DefaultValue="https://localhost:3000/assets/icon-16.png" />
-    <bt:Image id="icon32" DefaultValue="https://localhost:3000/assets/icon-32.png" />
-    <bt:Image id="icon80" DefaultValue="https://localhost:3000/assets/icon-80.png" />
+<bt:Image id="icon16" DefaultValue="https://dperez40.github.io/explain-my-email/assets/icon-16.png" />
+<bt:Image id="icon32" DefaultValue="https://dperez40.github.io/explain-my-email/assets/icon-32.png" />
+<bt:Image id="icon80" DefaultValue="https://dperez40.github.io/explain-my-email/assets/icon-80.png" />
   </bt:Images>
   <bt:Urls>
-    <bt:Url id="taskpaneUrl" DefaultValue="https://localhost:3000/taskpane.html" />
-    <bt:Url id="commandsUrl" DefaultValue="https://localhost:3000/commands.html" />
+<bt:Url id="taskpaneUrl" DefaultValue="https://dperez40.github.io/explain-my-email/taskpane.html" />
+<bt:Url id="commandsUrl" DefaultValue="https://dperez40.github.io/explain-my-email/commands.html" />
   </bt:Urls>
   <bt:ShortStrings>
     <bt:String id="residAppName" DefaultValue="ExplainMyEmail" />
