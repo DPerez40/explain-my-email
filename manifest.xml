@@ -52,8 +52,7 @@
     <Hosts>
       <Host Name="Mailbox">
         <DesktopFormFactor>
-          <FunctionFileUrl DefaultValue="https://dperez40.github.io/explain-my-email/function-file.html" />
-
+          <FunctionFile resid="functionFile" />
           <ExtensionPoint xsi:type="MessageReadCommandSurface">
             <OfficeTab id="TabDefault">
               <Group id="msgReadGroup">
