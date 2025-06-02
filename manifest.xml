@@ -13,6 +13,13 @@
   <Description DefaultValue="Helps users analyze email red flags." />
 <IconUrl DefaultValue="https://dperez40.github.io/explain-my-email/assets/icon-32.png" />
 <HighResolutionIconUrl DefaultValue="https://dperez40.github.io/explain-my-email/assets/icon-80.png" />
+<DefaultSettings>
+  <SourceLocation DefaultValue="https://dperez40.github.io/explain-my-email/taskpane.html"/>
+</DefaultSettings>
+
+<AppDomains>
+  <AppDomain>https://dperez40.github.io</AppDomain>
+</AppDomains>
 
   <Hosts>
     <Host Name="Mailbox" />
