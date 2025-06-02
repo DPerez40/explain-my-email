@@ -45,14 +45,14 @@
   <VersionOverrides V="1.0" xmlns="http://schemas.microsoft.com/office/mailappversionoverrides/1.0">
     <Requirements>
       <bt:Sets DefaultMinVersion="1.5">
-        <bt:Set Name="Mailbox" />
+        <bt:Set Name="Mailbox"/>
       </bt:Sets>
     </Requirements>
 
     <Hosts>
       <Host Name="Mailbox">
         <DesktopFormFactor>
-          <FunctionFile resid="functionFile" />
+          <FunctionFile resid="functionFile"/>
           <ExtensionPoint xsi:type="MessageReadCommandSurface">
             <OfficeTab id="TabDefault">
               <Group id="msgReadGroup">
@@ -87,7 +87,7 @@
       </bt:Images>
       <bt:Urls>
         <bt:Url id="taskpaneUrl" DefaultValue="https://dperez40.github.io/explain-my-email/taskpane.html"/>
-        <bt:Url id="functionFile" DefaultValue="https://dperez40.github.io/explain-my-email/function-file.html"/>
+        <bt:Url id="functionFile" DefaultValue="https://dperez40.github.io/explain-my-email/commands.html"/>
       </bt:Urls>
       <bt:ShortStrings>
         <bt:String id="groupLabel" DefaultValue="ExplainMyEmail"/>
