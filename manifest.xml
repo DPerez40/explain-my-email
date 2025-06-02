@@ -11,6 +11,8 @@
   <DefaultLocale>en-US</DefaultLocale>
   <DisplayName DefaultValue="ExplainMyEmail" />
   <Description DefaultValue="Helps users analyze email red flags." />
+<IconUrl DefaultValue="https://dperez40.github.io/explain-my-email/assets/icon-32.png" />
+<HighResolutionIconUrl DefaultValue="https://dperez40.github.io/explain-my-email/assets/icon-80.png" />
 
   <Hosts>
     <Host Name="Mailbox" />
