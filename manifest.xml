@@ -11,15 +11,17 @@
   <DefaultLocale>en-US</DefaultLocale>
   <DisplayName DefaultValue="ExplainMyEmail" />
   <Description DefaultValue="Helps users analyze email red flags." />
-<IconUrl DefaultValue="https://dperez40.github.io/explain-my-email/assets/icon-32.png" />
-<HighResolutionIconUrl DefaultValue="https://dperez40.github.io/explain-my-email/assets/icon-80.png" />
-<DefaultSettings>
-  <SourceLocation DefaultValue="https://dperez40.github.io/explain-my-email/taskpane.html"/>
-</DefaultSettings>
+  <IconUrl DefaultValue="https://dperez40.github.io/explain-my-email/assets/icon-32.png" />
+  <HighResolutionIconUrl DefaultValue="https://dperez40.github.io/explain-my-email/assets/icon-80.png" />
+  <SupportUrl DefaultValue="https://dperez40.github.io/explain-my-email/" />
 
-<AppDomains>
-  <AppDomain>https://dperez40.github.io</AppDomain>
-</AppDomains>
+  <DefaultSettings>
+    <SourceLocation DefaultValue="https://dperez40.github.io/explain-my-email/taskpane.html"/>
+  </DefaultSettings>
+
+  <AppDomains>
+    <AppDomain>https://dperez40.github.io</AppDomain>
+  </AppDomains>
 
   <Hosts>
     <Host Name="Mailbox" />
@@ -35,7 +37,6 @@
     <Form xsi:type="ItemRead">
       <DesktopSettings>
         <SourceLocation DefaultValue="https://dperez40.github.io/explain-my-email/taskpane.html" />
-
         <RequestedHeight>250</RequestedHeight>
       </DesktopSettings>
     </Form>
@@ -47,7 +48,9 @@
     <Rule xsi:type="ItemIs" ItemType="Message" FormType="Read" />
   </Rule>
 
-  <VersionOverrides xmlns="http://schemas.microsoft.com/office/mailappversionoverrides/1.0">
+  <VersionOverrides xmlns="http://schemas.microsoft.com/office/mailappversionoverrides/1.0"
+                    xsi:type="VersionOverridesV1_0">
+
     <Requirements>
       <bt:Sets DefaultMinVersion="1.5">
         <bt:Set Name="Mailbox" />
@@ -55,23 +58,23 @@
     </Requirements>
 
     <Description resid="residAppDescription" />
-<Resources>
-  <bt:Images>
-<bt:Image id="icon16" DefaultValue="https://dperez40.github.io/explain-my-email/assets/icon-16.png" />
-<bt:Image id="icon32" DefaultValue="https://dperez40.github.io/explain-my-email/assets/icon-32.png" />
-<bt:Image id="icon80" DefaultValue="https://dperez40.github.io/explain-my-email/assets/icon-80.png" />
-  </bt:Images>
-  <bt:Urls>
-<bt:Url id="taskpaneUrl" DefaultValue="https://dperez40.github.io/explain-my-email/taskpane.html" />
-  </bt:Urls>
-  <bt:ShortStrings>
-    <bt:String id="residAppName" DefaultValue="ExplainMyEmail" />
-  </bt:ShortStrings>
-  <bt:LongStrings>
-    <bt:String id="residAppDescription" DefaultValue="Helps users analyze email red flags." />
-  </bt:LongStrings>
-</Resources>
 
+    <Resources>
+      <bt:Images>
+        <bt:Image id="icon16" DefaultValue="https://dperez40.github.io/explain-my-email/assets/icon-16.png" />
+        <bt:Image id="icon32" DefaultValue="https://dperez40.github.io/explain-my-email/assets/icon-32.png" />
+        <bt:Image id="icon80" DefaultValue="https://dperez40.github.io/explain-my-email/assets/icon-80.png" />
+      </bt:Images>
+      <bt:Urls>
+        <bt:Url id="taskpaneUrl" DefaultValue="https://dperez40.github.io/explain-my-email/taskpane.html" />
+      </bt:Urls>
+      <bt:ShortStrings>
+        <bt:String id="residAppName" DefaultValue="ExplainMyEmail" />
+      </bt:ShortStrings>
+      <bt:LongStrings>
+        <bt:String id="residAppDescription" DefaultValue="Helps users analyze email red flags." />
+      </bt:LongStrings>
+    </Resources>
 
     <ExtensionPoint xsi:type="MessageReadCommandSurface">
       <OfficeTab id="TabDefault">
@@ -95,5 +98,6 @@
         </Group>
       </OfficeTab>
     </ExtensionPoint>
+
   </VersionOverrides>
 </OfficeApp>
