@@ -11,17 +11,7 @@
   <DefaultLocale>en-US</DefaultLocale>
   <DisplayName DefaultValue="ExplainMyEmail" />
   <Description DefaultValue="Helps users analyze email red flags." />
-  <IconUrl DefaultValue="https://dperez40.github.io/explain-my-email/assets/icon-32.png" />
-  <HighResolutionIconUrl DefaultValue="https://dperez40.github.io/explain-my-email/assets/icon-80.png" />
   <SupportUrl DefaultValue="https://dperez40.github.io/explain-my-email/" />
-
-  <DefaultSettings>
-    <SourceLocation DefaultValue="https://dperez40.github.io/explain-my-email/taskpane.html"/>
-  </DefaultSettings>
-
-  <AppDomains>
-    <AppDomain>https://dperez40.github.io</AppDomain>
-  </AppDomains>
 
   <Hosts>
     <Host Name="Mailbox" />
@@ -32,6 +22,14 @@
       <Set Name="Mailbox" />
     </Sets>
   </Requirements>
+
+  <DefaultSettings>
+    <SourceLocation DefaultValue="https://dperez40.github.io/explain-my-email/taskpane.html"/>
+  </DefaultSettings>
+
+  <AppDomains>
+    <AppDomain>https://dperez40.github.io</AppDomain>
+  </AppDomains>
 
   <FormSettings>
     <Form xsi:type="ItemRead">
@@ -48,9 +46,7 @@
     <Rule xsi:type="ItemIs" ItemType="Message" FormType="Read" />
   </Rule>
 
-  <VersionOverrides xmlns="http://schemas.microsoft.com/office/mailappversionoverrides/1.0"
-                    xsi:type="VersionOverridesV1_0">
-
+  <VersionOverrides xmlns="http://schemas.microsoft.com/office/mailappversionoverrides/1.0">
     <Requirements>
       <bt:Sets DefaultMinVersion="1.5">
         <bt:Set Name="Mailbox" />
@@ -62,8 +58,8 @@
     <Resources>
       <bt:Images>
         <bt:Image id="icon16" DefaultValue="https://dperez40.github.io/explain-my-email/assets/icon-16.png" />
-        <bt:Image id="icon32" DefaultValue="https://dperez40.github.io/explain-my-email/assets/icon-32.png" />
-        <bt:Image id="icon80" DefaultValue="https://dperez40.github.io/explain-my-email/assets/icon-80.png" />
+        <bt:Image id="icon32" DefaultValue="https://dperez40.github.io/explain-my-email/assets/icon-64.png" />
+        <bt:Image id="icon80" DefaultValue="https://dperez40.github.io/explain-my-email/assets/icon-128.png" />
       </bt:Images>
       <bt:Urls>
         <bt:Url id="taskpaneUrl" DefaultValue="https://dperez40.github.io/explain-my-email/taskpane.html" />
@@ -98,6 +94,5 @@
         </Group>
       </OfficeTab>
     </ExtensionPoint>
-
   </VersionOverrides>
 </OfficeApp>
