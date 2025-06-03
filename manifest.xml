@@ -63,7 +63,6 @@
   </bt:Images>
   <bt:Urls>
 <bt:Url id="taskpaneUrl" DefaultValue="https://dperez40.github.io/explain-my-email/taskpane.html" />
-<bt:Url id="commandsUrl" DefaultValue="https://dperez40.github.io/explain-my-email/commands.html" />
   </bt:Urls>
   <bt:ShortStrings>
     <bt:String id="residAppName" DefaultValue="ExplainMyEmail" />
