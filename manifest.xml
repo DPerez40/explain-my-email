@@ -11,7 +11,8 @@
   <DefaultLocale>en-US</DefaultLocale>
   <DisplayName DefaultValue="ExplainMyEmail" />
   <Description DefaultValue="Helps users analyze email red flags." />
-  <SupportUrl DefaultValue="https://dperez40.github.io/explain-my-email/" />
+  <SupportUrl DefaultValue="https://dperez40.github.io/explain-my-email/index.html" />
+
 
   <Hosts>
     <Host Name="Mailbox" />
